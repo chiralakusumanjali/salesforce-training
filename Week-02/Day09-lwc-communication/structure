@@ -1,0 +1,20 @@
+day9-lwc-communication/
+│
+├── README.md
+│
+├── dashboards/
+│   ├── student-dashboard.md
+│   ├── faculty-dashboard.md
+│   └── admin-dashboard.md
+│
+├── data-flow/
+│   └── student-registration-flow.md
+│
+├── communication/
+│   └── component-communication.md
+│
+├── comparison/
+│   └── aura-vs-lwc.md
+│
+└── reflection/
+    └── modular-architecture.md
