@@ -136,8 +136,8 @@ Verify that a student can successfully apply for a job when all conditions are s
 - The Application Status is automatically set to **Applied**.
 - No validation errors are displayed.
 
-  <img <img width="1917" height="972" alt="Screenshot 2026-07-29 165008" src="https://github.com/user-attachments/assets/38e1344b-1452-4314-b959-b364f89fd92e" />
-" />
+   <img width="1917" height="972" alt="Screenshot 2026-07-29 165008" src="https://github.com/user-attachments/assets/38e1344b-1452-4314-b959-b364f89fd92e" />
+  
 ###  Duplicate Application
 #### Objective
 
@@ -149,8 +149,8 @@ Verify that a student cannot apply for the same job more than once.
 
 > **Student has already applied for this job.**
 
-<img <img width="1917" height="982" alt="Screenshot 2026-07-29 165222" src="https://github.com/user-attachments/assets/641767e1-0db2-47de-8c7f-c4e792661fa0" />
- " />
+<img width="1917" height="982" alt="Screenshot 2026-07-29 165222" src="https://github.com/user-attachments/assets/641767e1-0db2-47de-8c7f-c4e792661fa0" />
+ 
 ---
 ### Test Scenario 3: Low CGPA Validation
 
@@ -163,9 +163,8 @@ Verify that students who do not meet the minimum CGPA requirement cannot apply f
 - The following validation error message is displayed:
 
 > **Student CGPA is below the minimum requirement.**
+<img width="1913" height="973" alt="Screenshot 2026-07-29 164702" src="https://github.com/user-attachments/assets/557df086-ea14-4ab8-a552-41fb6df2897a" />
 
-<img <img width="1913" height="973" alt="Screenshot 2026-07-29 164702" src="https://github.com/user-attachments/assets/557df086-ea14-4ab8-a552-41fb6df2897a" />
-" />
 ---
 ### Test Scenario 4: Last Date Validation
 
@@ -180,8 +179,8 @@ Verify that applications cannot be submitted after the last application date.
 
 > **Application deadline has passed.**
 
- <img<img width="1917" height="978" alt="Screenshot 2026-07-29 165328" src="https://github.com/user-attachments/assets/44bf8eb6-b1b7-44db-8816-8603eb15e4eb" />
-" />
+<img width="1917" height="978" alt="Screenshot 2026-07-29 165328" src="https://github.com/user-attachments/assets/44bf8eb6-b1b7-44db-8816-8603eb15e4eb" />
+
 ---
 
 # README Questions
