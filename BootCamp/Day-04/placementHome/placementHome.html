@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card title="Student Details">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={student}>
+
+                <p><strong>Name :</strong> {student.Name}</p>
+
+                <p><strong>Student ID :</strong> {student.Student_Id__c}</p>
+
+                <p><strong>Branch :</strong> {student.Branch__c}</p>
+
+                <p><strong>CGPA :</strong> {student.CGPA__c}</p>
+
+                <p><strong>Email :</strong> {student.Student_Email__c}</p>
+
+                <p><strong>Phone :</strong> {student.Phone__c}</p>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
