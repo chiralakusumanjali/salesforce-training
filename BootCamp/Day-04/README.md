@@ -1,4 +1,4 @@
-# 🚀 Placement Cell Management System - Lightning Web Components (LWC)
+#  Placement Cell Management System - Lightning Web Components (LWC)
 
 ## 📌 Project Overview
 
@@ -6,7 +6,7 @@ This project was developed as part of Salesforce Training – Day 4 to learn Lig
 
 The components are integrated into a Placement Cell Management System and demonstrate how LWC can be used to build interactive Salesforce user interfaces.
 
-## 🛠 Components Developed
+##  Components Developed
 
 ### 1. Student Details (placementHome)
 
@@ -179,7 +179,7 @@ Through this project, I learned:
 
 ---
 
-# 🚀 Technologies Used
+# Technologies Used
 
 - Salesforce Developer Org
 - Lightning Web Components (LWC)
