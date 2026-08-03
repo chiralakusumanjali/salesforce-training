@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Placement Cell Portal">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-button
+                label="Show Welcome Message"
+                variant="brand"
+                onclick={showMessage}>
+            </lightning-button>
+
+            <br/><br/>
+
+            <template if:true={message}>
+                <div class="slds-box slds-theme_success">
+                    <p>{message}</p>
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>
