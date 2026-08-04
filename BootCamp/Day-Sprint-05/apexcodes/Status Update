@@ -1,0 +1,4 @@
+ApplicationService.updateApplicationStatus(
+    'a02dM00000etSeAQAU',-ApplicationId
+    'Selected'
+);
