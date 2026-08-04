@@ -1,0 +1,8 @@
+String result = ApplicationService.submitApplication(
+    'a00dM00003eqf3vQAA',-LowCGPAStudentId
+    'a04dM000005et7lQAA'-HighRequirementJobId
+);
+
+System.debug(result);
+
+
