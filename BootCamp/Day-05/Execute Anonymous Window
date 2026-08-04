@@ -1,0 +1,5 @@
+
+Id studentId = 'a00dM00003eqf3vQAA';
+Id jobId = 'a04dM000005etEDQAY';
+
+System.debug(ApplicationService.submitApplication(studentId, jobId));
