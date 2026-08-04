@@ -1,0 +1,6 @@
+String result = ApplicationService.submitApplication(
+    'a00dM00003gmp4vQAA',-StudentId
+    'a04dM000005evntQAA'-ExpiredJobId
+);
+
+System.debug(result);
