@@ -209,5 +209,3 @@ During this sprint:
 ## Conclusion
 
 The Placement Management System successfully implements the complete business transaction described in Sprint 5 using Apex, SOQL, and DML. The application retrieves Student and Job information, validates business rules such as duplicate applications, application deadlines, and minimum CGPA, and creates Application records only after all validations are successfully completed. It also supports updating the application status using DML.
-
-Through this sprint, the project demonstrates the importance of retrieving accurate information before making business decisions and performing database operations only after all business validations have passed. This implementation follows the engineering workflow introduced in Sprint 5 and provides a structured, maintainable approach to managing placement applications in Salesforce.
