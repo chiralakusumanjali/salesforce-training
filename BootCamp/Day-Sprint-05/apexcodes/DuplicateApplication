@@ -1,6 +1,6 @@
 String result = ApplicationService.submitApplication(
-    'a00dM00003gmp4vQAA',
-    'a04dM000005iqJNQAY'
+    'a00dM00003gmp4vQAA',-SameStudentId
+    'a04dM000005iqJNQAY'-SameJobId
 );
 
 System.debug(result);
