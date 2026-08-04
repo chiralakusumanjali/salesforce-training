@@ -1,0 +1,6 @@
+String result = ApplicationService.submitApplication(
+    'a00dM00003gmp4vQAA',
+    'a04dM000005etEDQAY'
+);
+
+System.debug(result);
