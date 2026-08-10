@@ -107,7 +107,10 @@ The following features are part of today's task:
 The module uses the following Salesforce objects.
 
 ---
+## Output
+<img width="1917" height="977" alt="Screenshot 2026-08-10 145043" src="https://github.com/user-attachments/assets/69f08674-1446-4bb0-ac03-6213e75d7975" />
 
+---
 ## 5.1 Jobss__c
 
 The `Jobss__c` object stores job opportunities available through the placement system.
