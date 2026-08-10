@@ -1,0 +1,87 @@
+<template>
+
+    <lightning-card title={job.Name}>
+
+        <div class="slds-p-around_medium">
+
+            <p class="slds-m-bottom_small">
+                <strong>Job Role:</strong>
+                {job.Job_Role__c}
+            </p>
+
+            <p class="slds-m-bottom_small">
+                <strong>Eligible Branch:</strong>
+                {job.Eligible_Branch__c}
+            </p>
+
+            <p class="slds-m-bottom_small">
+                <strong>Minimum CGPA:</strong>
+                {job.Minimum_CGPA__c}
+            </p>
+
+            <p class="slds-m-bottom_small">
+                <strong>Maximum Backlogs:</strong>
+                {job.Maximum_Backlogs__c}
+            </p>
+
+            <p class="slds-m-bottom_small">
+                <strong>Location:</strong>
+                {job.Location__c}
+            </p>
+
+            <p class="slds-m-bottom_medium">
+                <strong>Last Date:</strong>
+                {job.Last_Date__c}
+            </p>
+
+
+            <div>
+
+                <!-- VIEW DETAILS -->
+                   <lightning-button
+                        label="View Details"
+                        variant="neutral"
+                        data-id={job.Id}
+                        onclick={handleViewDetails}>
+                    </lightning-button>
+   
+
+
+                <!-- APPLY -->
+
+                <lightning-button
+                    class="slds-m-left_small"
+                    variant="brand"
+                    label={applyButtonLabel}
+                    data-job-id={job.Id}
+                    onclick={handleApply}
+                    disabled={isProcessing}>
+                </lightning-button>
+
+            </div>
+
+
+            <!-- PROCESSING -->
+
+            <template if:true={isProcessing}>
+
+                <div class="slds-m-top_medium">
+
+                    <lightning-spinner
+                        alternative-text="Submitting application"
+                        size="small">
+                    </lightning-spinner>
+
+                    <p class="slds-m-top_small">
+                        Submitting your application...
+                    </p>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>
