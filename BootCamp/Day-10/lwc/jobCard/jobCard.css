@@ -1,0 +1,195 @@
+/* ==========================================
+   BACKDROP
+   ========================================== */
+
+.modal-backdrop {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+/* ==========================================
+   DETAILS CARD
+   ========================================== */
+
+.details-card {
+
+    position: relative;
+
+    background: white;
+
+    width: 500px;
+
+    max-width: 90%;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================
+   JOB NAME
+   ========================================== */
+
+.details-card h2 {
+
+    color: #163f70;
+
+    font-size: 26px;
+
+    margin:
+        0 0 8px 0;
+}
+
+
+/* ==========================================
+   JOB ROLE
+   ========================================== */
+
+.details-role {
+
+    color: #596b7d;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   LINE
+   ========================================== */
+
+.line {
+
+    height: 1px;
+
+    background: #e5e5e5;
+
+    margin:
+        10px 0 20px;
+}
+
+
+/* ==========================================
+   DETAILS CONTENT
+   ========================================== */
+
+.details-content {
+
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   DETAIL ROW
+   ========================================== */
+
+.detail-row {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid #eeeeee;
+
+    font-size: 15px;
+}
+
+
+.detail-row strong {
+
+    text-align: right;
+}
+
+
+/* ==========================================
+   CLOSE X
+   ========================================== */
+
+.close-button {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+/* ==========================================
+   BUTTON AREA
+   ========================================== */
+
+.modal-buttons {
+
+    display: flex;
+
+    justify-content:
+        flex-end;
+
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+   ========================================== */
+
+.close-modal {
+
+    background: #1769ff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding:
+        10px 25px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
