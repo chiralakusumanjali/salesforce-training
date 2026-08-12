@@ -1,0 +1,96 @@
+<template>
+
+    <section class="applications-section">
+
+        <!-- HEADER -->
+        <div class="section-header">
+
+            <div class="header-icon">
+                📄
+            </div>
+
+            <div>
+                <h2 class="section-title">
+                    My Applications
+                </h2>
+
+                <p class="section-subtitle">
+                    Track the jobs you have applied for
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- APPLICATIONS -->
+        <template if:true={hasApplications}>
+
+            <div class="applications-grid">
+
+                <template
+                    for:each={applications}
+                    for:item="application"
+                >
+
+                    <div
+                        key={application.Id}
+                        class="application-card"
+                    >
+
+                        <div class="job-name">
+                            {application.Jobss__r.Name}
+                        </div>
+
+                        <div class="application-detail">
+                            <strong>Role:</strong>
+                            <span class="detail-value">
+                                {application.Jobss__r.Job_Role__c}
+                            </span>
+                        </div>
+
+                        <div class="application-detail">
+                            <strong>Location:</strong>
+                            <span class="detail-value">
+                                {application.Jobss__r.Location__c}
+                            </span>
+                        </div>
+
+                        <div class="application-detail">
+                            <strong>Applied Date:</strong>
+                            <span class="detail-value">
+                                {application.Application_Date__c}
+                            </span>
+                        </div>
+
+                        <div class="application-detail">
+                            <strong>Last Date:</strong>
+                            <span class="detail-value">
+                                {application.Jobss__r.Last_Date__c}
+                            </span>
+                        </div>
+
+                        <div class="status-badge">
+                            {application.Stauts__c}
+                        </div>
+
+                    </div>
+
+                </template>
+
+            </div>
+
+        </template>
+
+
+        <!-- NO APPLICATIONS -->
+        <template if:false={hasApplications}>
+
+            <div class="no-applications">
+                You have not applied for any jobs yet.
+            </div>
+
+        </template>
+
+    </section>
+
+</template>
