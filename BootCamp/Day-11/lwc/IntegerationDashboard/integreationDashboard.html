@@ -1,0 +1,97 @@
+<template>
+
+    <lightning-card
+        title="Application Integration Dashboard">
+
+        <div class="slds-p-around_medium">
+
+            <table class="
+                slds-table
+                slds-table_cell-buffer
+                slds-table_bordered">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student</th>
+
+                        <th>Job</th>
+
+                        <th>Application Status</th>
+
+                        <th>Integration Status</th>
+
+                        <th>External Candidate ID</th>
+
+                        <th>Last Attempt</th>
+
+                        <th>Error</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <template
+                        for:each={applications}
+                        for:item="application">
+
+                        <tr key={application.Id}>
+
+                            <td>
+                                {application.studentName}
+                            </td>
+
+                            <td>
+                                {application.jobName}
+                            </td>
+
+                            <td>
+                                {application.Stauts__c}
+                            </td>
+
+                            <td>
+                                {application.Integration_Status__c}
+                            </td>
+
+                            <td>
+                                {application.External_Candidate_Id__c}
+                            </td>
+
+                            <td>
+                                {application.Last_Integration_Attempt__c}
+                            </td>
+
+                            <td>
+                                {application.Integration_Error__c}
+                            </td>
+
+                            <td>
+
+                                <lightning-button
+                                    label="Retry Sync"
+                                    variant="brand"
+                                    data-id={application.Id}
+                                    onclick={handleRetrySync}>
+                                </lightning-button>
+
+                            </td>
+
+                        </tr>
+
+                    </template>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </lightning-card>
+
+</template>
