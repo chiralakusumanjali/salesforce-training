@@ -1,0 +1,24 @@
+Salesforce Application     CandidateSyncQueueable     Recruitment_API     External Recruitment System
+        │                           │                       │                       │
+        │                           │                       │                       │
+        │ Application = Selected    │                       │                       │
+        │──────────────────────────>│                       │                       │
+        │                           │                       │                       │
+        │                           │ Query Application     │                       │
+        │                           │ + Student + Job       │                       │
+        │                           │                       │                       │
+        │                           │ Build JSON            │                       │
+        │                           │──────────────────────>│                       │
+        │                           │                       │ POST /candidates      │
+        │                           │                       │──────────────────────>│
+        │                           │                       │                       │
+        │                           │                       │   HTTP 200 / 201      │
+        │                           │                       │<──────────────────────│
+        │                           │ Response              │                       │
+        │                           │<──────────────────────│                       │
+        │                           │                       │                       │
+        │                           │ Process Response      │                       │
+        │                           │                       │                       │
+        │<──────────────────────────│                       │                       │
+        │ Update Integration Fields │                       │                       │
+        │                           │                       │                       │
