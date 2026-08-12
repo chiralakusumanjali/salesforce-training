@@ -1,0 +1,43 @@
+┌─────────────────────┐
+│ Application         │
+│ Status = Selected   │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Queueable Apex      │
+│ CandidateSync       │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Named Credential    │
+│ Recruitment_API     │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ External Recruitment│
+│ REST API             │
+│ POST /candidates     │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Process Response    │
+└──────────┬──────────┘
+           │
+       ┌───┴────┐
+       ▼        ▼
+   Success    Failure
+       │        │
+       ▼        ▼
+     Sent    Retry Required
+       │        │
+       └───┬────┘
+           ▼
+┌─────────────────────┐
+│ Application Fields  │
+│ Status / External ID│
+│ Error / Last Attempt│
+└─────────────────────┘
