@@ -1,0 +1,267 @@
+<template>
+
+    <section class="jobs-section">
+
+        <div class="section-title">
+
+            <div>
+                <h2>Available Jobs</h2>
+
+                <p>
+                    Jobs matching your CGPA, branch and backlog criteria
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- LOADING -->
+
+        <template if:true={isLoading}>
+
+            <div class="loading">
+
+                <lightning-spinner
+                    alternative-text="Loading jobs">
+                </lightning-spinner>
+
+            </div>
+
+        </template>
+
+
+        <!-- ERROR -->
+
+        <template if:true={errorMessage}>
+
+            <div class="error">
+                {errorMessage}
+            </div>
+
+        </template>
+
+
+        <!-- JOBS -->
+
+        <template if:true={hasJobs}>
+
+            <div class="job-grid">
+
+                <template
+                    for:each={jobs}
+                    for:item="job">
+
+                    <article
+                        class="job-card"
+                        key={job.Id}>
+
+
+                        <!-- JOB TITLE -->
+
+                        <div class="job-title">
+
+                            <h3>
+                                {job.Name}
+                            </h3>
+
+                            <span>
+                                {job.Job_Role__c}
+                            </span>
+
+                        </div>
+
+
+                        <!-- JOB INFORMATION -->
+
+                        <div class="job-info">
+
+                            <p>
+                                <b>Eligible Branch:</b>
+                                {job.Eligible_Branch__c}
+                            </p>
+
+                            <p>
+                                <b>Minimum CGPA:</b>
+                                {job.Minimum_CGPA__c}
+                            </p>
+
+                            <p>
+                                <b>Maximum Backlogs:</b>
+                                {job.Maximum_Backlogs__c}
+                            </p>
+
+                            <p>
+                                <b>Location:</b>
+                                {job.Location__c}
+                            </p>
+
+                            <p>
+                                <b>Last Date:</b>
+                                {job.Last_Date__c}
+                            </p>
+
+                        </div>
+
+
+                        <!-- BUTTONS -->
+
+                        <div class="buttons">
+
+                            <button
+                                class="details-button"
+                                data-id={job.Id}
+                                onclick={handleViewDetails}>
+
+                                View Details
+
+                            </button>
+
+
+                            <button
+                                class="apply-button"
+                                data-id={job.Id}
+                                onclick={handleApply}
+                                disabled={job.isSubmitting}>
+
+                                Apply
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </template>
+
+            </div>
+
+        </template>
+
+
+        <!-- NO JOBS -->
+
+        <template if:true={showNoJobs}>
+
+            <div class="no-jobs">
+
+                <h3>
+                    No Eligible Jobs Available
+                </h3>
+
+                <p>
+                    There are currently no jobs matching
+                    your placement profile.
+                </p>
+
+            </div>
+
+        </template>
+
+
+        <!-- DETAILS MODAL -->
+
+        <template if:true={showDetails}>
+
+            <section
+                role="dialog"
+                tabindex="-1"
+                class="modal-backdrop">
+
+
+                <div class="modal">
+
+                    <template if:true={selectedJob}>
+
+
+                        <!-- MODAL HEADER -->
+
+                        <div class="modal-header">
+
+                            <h2>
+                                {selectedJob.Name}
+                            </h2>
+
+
+                            <button
+                                class="close-button"
+                                onclick={closeDetails}>
+
+                                ×
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- MODAL BODY -->
+
+                        <div class="modal-body">
+
+                            <p>
+                                <b>Role:</b>
+                                {selectedJob.Job_Role__c}
+                            </p>
+
+                            <p>
+                                <b>Eligible Branch:</b>
+                                {selectedJob.Eligible_Branch__c}
+                            </p>
+
+                            <p>
+                                <b>Minimum CGPA:</b>
+                                {selectedJob.Minimum_CGPA__c}
+                            </p>
+
+                            <p>
+                                <b>Maximum Backlogs:</b>
+                                {selectedJob.Maximum_Backlogs__c}
+                            </p>
+
+                            <p>
+                                <b>Location:</b>
+                                {selectedJob.Location__c}
+                            </p>
+
+                            <p>
+                                <b>Last Date:</b>
+                                {selectedJob.Last_Date__c}
+                            </p>
+
+                        </div>
+
+
+                        <!-- MODAL FOOTER -->
+
+                        <div class="modal-footer">
+
+                            <button
+                                class="details-button"
+                                onclick={closeDetails}>
+
+                                Close
+
+                            </button>
+
+
+                            <button
+                                class="apply-button"
+                                onclick={handleModalApply}
+                                disabled={isModalSubmitting}>
+
+                                Apply Now
+
+                            </button>
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+            </section>
+
+        </template>
+
+    </section>
+
+</template>
