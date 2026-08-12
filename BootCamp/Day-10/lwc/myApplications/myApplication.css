@@ -1,0 +1,315 @@
+/* =====================================================
+   MY APPLICATIONS - MAIN CONTAINER
+   ===================================================== */
+
+.applications-section {
+    background: #f4f6f9;
+    padding: 40px 56px 60px;
+    border-radius: 0 0 24px 24px;
+    min-height: 400px;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+   ===================================================== */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 38px;
+}
+
+.header-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #a100ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 400;
+    color: #173f70;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #718096;
+}
+
+
+/* =====================================================
+   APPLICATION GRID
+   ===================================================== */
+
+.applications-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   APPLICATION CARD
+   ===================================================== */
+
+.application-card {
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 34px 30px 30px;
+
+    min-height: 305px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    border: 1px solid #f0f0f0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CARD HOVER */
+
+.application-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   JOB NAME
+   ===================================================== */
+
+.job-name {
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #0757a0;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   APPLICATION DETAILS
+   ===================================================== */
+
+.application-detail {
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+    color: #64748b;
+
+    line-height: 1.4;
+}
+
+.application-detail strong {
+    color: #60738f;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   VALUE AFTER LABEL
+   ===================================================== */
+
+.detail-value {
+    color: #617895;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+   ===================================================== */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    background: #dff7e8;
+
+    color: #087f3e;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+/* SELECTED STATUS */
+
+.status-selected {
+    background: #dff7e8;
+
+    color: #087f3e;
+}
+
+
+/* APPLIED STATUS */
+
+.status-applied {
+    background: #dff7e8;
+
+    color: #087f3e;
+}
+
+
+/* =====================================================
+   NO APPLICATIONS
+   ===================================================== */
+
+.no-applications {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    color: #718096;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.error-message {
+    background: #fff0f0;
+
+    color: #d32f2f;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.loading-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 200px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+   ===================================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .applications-section {
+        padding: 35px 35px 50px;
+    }
+
+    .applications-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 24px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+   ===================================================== */
+
+@media screen and (max-width: 650px) {
+
+    .applications-section {
+        padding: 28px 20px 40px;
+    }
+
+    .section-header {
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .applications-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .application-card {
+        min-height: 280px;
+
+        padding: 28px 24px;
+    }
+
+}
