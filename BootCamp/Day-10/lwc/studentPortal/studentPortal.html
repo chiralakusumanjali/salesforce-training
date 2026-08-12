@@ -1,0 +1,94 @@
+<template>
+
+    <div class="portal">
+
+        <div class="portal-header">
+
+            <lightning-icon
+                icon-name="standard:student"
+                size="medium">
+            </lightning-icon>
+
+            <div>
+                <h1>Student Placement Portal</h1>
+                <p>Manage your placement profile and applications</p>
+            </div>
+
+        </div>
+
+
+        <template if:true={errorMessage}>
+
+            <div class="error-box">
+                {errorMessage}
+            </div>
+
+        </template>
+
+
+        <!-- STUDENT SUMMARY -->
+
+        <template if:true={student}>
+
+            <c-student-summary
+                student={student}>
+            </c-student-summary>
+
+
+            <!-- STUDENT PROFILE -->
+
+            <c-student-profile
+                student={student}
+                onsavedsuccess={handleProfileSaved}>
+            </c-student-profile>
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-card">
+
+                <h2>
+                    Welcome, {student.Name}! 👋
+                </h2>
+
+                <p>
+                    Welcome to your Student Placement Portal.
+                    Check your eligible opportunities and apply
+                    before the deadlines.
+                </p>
+
+            </div>
+
+
+            <!-- ELIGIBLE JOBS -->
+
+            <c-eligible-jobs
+                student-id={studentId}
+                onapplicationcreated={handleApplicationCreated}>
+            </c-eligible-jobs>
+
+
+            <!-- MY APPLICATIONS -->
+
+            <c-my-applications
+                student-id={studentId}>
+            </c-my-applications>
+
+        </template>
+
+
+        <template if:true={loading}>
+
+            <div class="loading">
+
+                <lightning-spinner
+                    alternative-text="Loading student information">
+                </lightning-spinner>
+
+            </div>
+
+        </template>
+
+    </div>
+
+</template>
