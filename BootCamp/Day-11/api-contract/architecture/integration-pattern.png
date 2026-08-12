@@ -1,0 +1,52 @@
+                 SALESFORCE
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │ Application         │
+          │ Status = Selected   │
+          └──────────┬──────────┘
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │ Queueable Apex      │
+          │                     │
+          │ Async Processing    │
+          │ Allows Callouts     │
+          └──────────┬──────────┘
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │ Named Credential    │
+          │ Recruitment_API     │
+          │                     │
+          │ Authentication      │
+          │ Endpoint            │
+          └──────────┬──────────┘
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │ External REST API   │
+          │                     │
+          │ POST /candidates    │
+          └──────────┬──────────┘
+                     │
+                  Response
+                     │
+                     ▼
+          ┌─────────────────────┐
+          │ Response Handling   │
+          └──────────┬──────────┘
+                     │
+             ┌───────┴────────┐
+             │                │
+             ▼                ▼
+          Success           Failure
+             │                │
+             ▼                ▼
+           Sent        Failed / Retry
+             │          Required
+             ▼
+     External Candidate ID
+             │
+             ▼
+      Duplicate Protection
