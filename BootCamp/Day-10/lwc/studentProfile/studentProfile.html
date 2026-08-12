@@ -1,0 +1,152 @@
+<template>
+
+    <section class="profile-card">
+
+        <div class="section-header">
+
+            <lightning-icon
+                icon-name="standard:contact"
+                size="medium">
+            </lightning-icon>
+
+            <div>
+
+                <h2>Student Profile</h2>
+
+                <p>
+                    Update your placement information
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <template if:true={student}>
+
+            <div class="form-grid">
+
+                <div>
+                    <label>Student Name</label>
+                    <input
+                        value={student.Name}
+                        disabled>
+                </div>
+
+
+                <div>
+                    <label>Student ID</label>
+                    <input
+                        value={student.Student_Id__c}
+                        disabled>
+                </div>
+
+
+                <div>
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        data-field="email"
+                        value={email}
+                        onchange={handleChange}>
+                </div>
+
+
+                <div>
+                    <label>Phone</label>
+                    <input
+                        type="tel"
+                        data-field="phone"
+                        value={phone}
+                        onchange={handleChange}>
+                </div>
+
+
+                <div>
+                    <label>Branch</label>
+
+                    <select
+                        data-field="branch"
+                        value={branch}
+                        onchange={handleChange}>
+
+                        <option value="">
+                            Select Branch
+                        </option>
+
+                        <option value="CSE">
+                            CSE
+                        </option>
+
+                        <option value="IT">
+                            IT
+                        </option>
+
+                        <option value="CSBS">
+                            CSBS
+                        </option>
+
+                        <option value="AIML">
+                            AIML
+                        </option>
+
+                        <option value="CIVIL">
+                            CIVIL
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+                    <label>CGPA</label>
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        min="0"
+                        max="10"
+                        data-field="cgpa"
+                        value={cgpa}
+                        onchange={handleChange}>
+                </div>
+
+
+                <div>
+                    <label>Backlogs</label>
+
+                    <input
+                        type="number"
+                        min="0"
+                        data-field="backlogs"
+                        value={backlogs}
+                        onchange={handleChange}>
+                </div>
+
+            </div>
+
+
+            <div class="save-area">
+
+                <button
+                    onclick={handleSave}
+                    disabled={saving}>
+
+                    <template if:true={saving}>
+                        Saving...
+                    </template>
+
+                    <template if:false={saving}>
+                        Save Profile
+                    </template>
+
+                </button>
+
+            </div>
+
+        </template>
+
+    </section>
+
+</template>
