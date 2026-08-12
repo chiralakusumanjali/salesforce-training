@@ -1,0 +1,79 @@
+<template>
+
+    <section class="summary-card">
+
+        <div class="section-header">
+
+            <lightning-icon
+                icon-name="standard:student"
+                size="medium">
+            </lightning-icon>
+
+            <div>
+
+                <h2>Student Summary</h2>
+
+                <p>
+                    Your current placement profile
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <template if:true={hasStudent}>
+
+            <div class="summary-grid">
+
+                <div class="summary-item">
+                    <span>Name</span>
+                    <strong>{student.Name}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Student ID</span>
+                    <strong>{student.Student_Id__c}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Branch</span>
+                    <strong>{student.Branch__c}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>CGPA</span>
+                    <strong>{student.CGPA__c}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Backlogs</span>
+                    <strong>{student.Backlogs__c}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Phone</span>
+                    <strong>{student.Phone__c}</strong>
+                </div>
+
+                <div class="summary-item">
+                    <span>Email</span>
+                    <strong>{student.Student_Email__c}</strong>
+                </div>
+
+            </div>
+
+        </template>
+
+
+        <template if:false={hasStudent}>
+
+            <div class="empty">
+                Student information is loading...
+            </div>
+
+        </template>
+
+    </section>
+
+</template>
